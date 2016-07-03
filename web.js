@@ -3,7 +3,7 @@ var fs		= require('fs');
 var path 	= require('path');
 var mime	= require('mime');
 var cache	= {};
-var port    = process.env.PORT || 3000;
+var port    = process.env.PORT || 5000;
 
 function send404(response)
 {
