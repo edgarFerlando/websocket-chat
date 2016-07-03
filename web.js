@@ -3,6 +3,7 @@ var fs		= require('fs');
 var path 	= require('path');
 var mime	= require('mime');
 var cache	= {};
+var port    = process.env.PORT || 3000;
 
 function send404(response)
 {
@@ -55,9 +56,9 @@ serveStatic(response, cache, absPath);
 });
 
 
-server.listen(3000, function()
+server.listen(port, function()
 		{
-			console.log("Server Listening on port 3000.");
+            console.log("Server Listening on." +port);
 		});
 
 var chatServer = require('./lib/chat_server');
